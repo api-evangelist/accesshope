@@ -1,0 +1,54 @@
+# AccessHope
+
+> AccessHope is a health benefits company, founded in 2019 and wholly owned by City of Hope, that delivers remote cancer expertise as an employer-sponsored benefit. Subspecialist teams at a coalition of NCI-designated Comprehensive Cancer Centers review a member's case and return guidance to the member's own local oncologist. Roughly 9 million covered members across 700+ employer and health-plan clients.
+
+This file is an API Evangelist-generated catalog summary. AccessHope does not publish an
+llms.txt of its own (https://www.myaccesshope.org/llms.txt returned 404 on 2026-08-06).
+
+## API surface
+
+AccessHope publishes **no public API**: no developer portal, no API reference, no OpenAPI /
+AsyncAPI / GraphQL / Postman artifact, no SDK on npm, PyPI, RubyGems, Packagist or NuGet, and
+no `/.well-known/` discovery documents. Client onboarding is a weekly eligibility file feed
+coordinated by an implementation team, not a self-service API.
+
+Authenticated web applications exist but are end-user products, not developer surfaces:
+
+- app.myaccesshope.org — member/staff portal (Next.js + NextAuth, credentials provider only; `robots.txt` = `Disallow: /`)
+- docs.myaccesshope.org — document portal behind login (not developer documentation)
+
+## Company
+
+- [Home](https://www.myaccesshope.org/)
+- [About](https://www.myaccesshope.org/about): the model and the seven NCI-designated Comprehensive Cancer Center partners
+- [For employers](https://www.myaccesshope.org/employers): includes the implementation FAQ describing the weekly eligibility file
+- [For consultants](https://www.myaccesshope.org/consultants)
+- [For health plans](https://www.myaccesshope.org/health-plans)
+- [Careers](https://www.myaccesshope.org/careers)
+
+## Content
+
+- [Blog](https://www.myaccesshope.org/blog) ([RSS](https://www.myaccesshope.org/blog/rss.xml))
+- [Press releases](https://www.myaccesshope.org/press-releases) ([RSS](https://www.myaccesshope.org/press-releases/rss.xml))
+- [Recent news](https://www.myaccesshope.org/recent-news)
+- [Insights](https://www.myaccesshope.org/insights)
+
+## Trust, security and compliance
+
+- [Trust Center](https://trust.myaccesshope.org/) — Thoropass-hosted; contents load over an authenticated API and documents require an NDA access group
+- [HITRUST CSF r2 certification announcement](https://www.myaccesshope.org/blog/accesshope-achieves-hitrust-csf-certification) (2022-10-26)
+- [2024 Fortress Cybersecurity Award release](https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award) — states HITRUST r2 maintained plus SOC 2 Type I and Type II attained
+- [Privacy policy](https://www.myaccesshope.org/privacy) — privacy@myaccesshope.org
+- [Terms](https://www.myaccesshope.org/terms)
+- No `/.well-known/security.txt`, no published vulnerability disclosure policy, and no bug bounty program were found.
+
+## API Evangelist artifacts in this repo
+
+- conformance/accesshope-conformance.yml — certifications and regulatory posture
+- security/accesshope-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe
+- security/accesshope-trust-center.yml — trust center record
+
+## Optional
+
+- Parent organization: City of Hope (https://www.cityofhope.org/ — the AccessHope page there returned 403 to an automated fetch on 2026-08-06)
+- [LinkedIn](https://www.linkedin.com/company/accesshope)

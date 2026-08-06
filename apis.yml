@@ -1,17 +1,39 @@
 aid: accesshope
 name: AccessHope
-description: 'AccessHope is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'AccessHope is a Los Angeles-area health benefits company, founded in
+  2019 and wholly owned by City of Hope, that delivers remote cancer expertise as an
+  employer-sponsored benefit. Its subspecialist teams review a member''s pathology,
+  imaging, molecular testing and treatment plan against the latest evidence from a
+  coalition of National Cancer Institute-designated Comprehensive Cancer Centers —
+  City of Hope, Dana-Farber Cancer Institute, Emory Winship, Fred Hutch, Johns Hopkins
+  Kimmel, Northwestern Medicine Lurie, and UT Southwestern Simmons — and return guidance
+  to the member''s own local oncologist rather than moving the patient. AccessHope
+  reports roughly 9 million covered members across 700+ employer and health-plan clients,
+  including 70+ Fortune 500 companies. Delivery is business-to-business: employers,
+  benefits consultants, health plans and navigation partners onboard through an eligibility
+  file feed and an implementation-managed workflow, while members and clinical staff
+  use credentialed web portals. AccessHope publishes no public developer program, API
+  documentation, or machine-readable API contract.'
 url: https://raw.githubusercontent.com/api-evangelist/accesshope/refs/heads/main/apis.yml
+image: https://www.myaccesshope.org/hubfs/Logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass
 specificationVersion: '0.20'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Healthcare
+- Oncology
+- Cancer Care
+- Employee Benefits
+- Health Benefits
+- Digital Health
+- Telehealth
+- Second Opinion
+- Employer Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,67 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/accesshope-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.myaccesshope.org/
+- type: About
+  url: https://www.myaccesshope.org/about
+- type: Blog
+  url: https://www.myaccesshope.org/blog
+- type: News
+  url: https://www.myaccesshope.org/news
+- type: PressReleases
+  url: https://www.myaccesshope.org/press-releases
+- type: Careers
+  url: https://www.myaccesshope.org/careers
+- type: PrivacyPolicy
+  url: https://www.myaccesshope.org/privacy
+- type: TermsOfService
+  url: https://www.myaccesshope.org/terms
+- type: Login
+  url: https://app.myaccesshope.org/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/accesshope
+- type: Twitter
+  url: https://twitter.com/myaccesshope
+- type: Conformance
+  url: conformance/accesshope-conformance.yml
+- type: Compliance
+  url: https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award
+- type: TrustCenter
+  url: security/accesshope-trust-center.yml
+- type: LLMsTxt
+  url: llms/accesshope-llms.txt
+- type: BlogRSS
+  url: https://www.myaccesshope.org/blog/rss.xml
+
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AccessHope onboards employer clients with a weekly eligibility file coordinated by an
+    implementation team rather than an API; its only software surfaces are the credentialed
+    member portal at app.myaccesshope.org (NextAuth credentials provider, robots.txt
+    Disallow /) and a login-gated document portal at docs.myaccesshope.org, and there is no
+    developer portal, API reference, spec, SDK or /.well-known/ document anywhere on the
+    myaccesshope.org estate.
+  evidence:
+  - url: https://www.myaccesshope.org/developers
+    status: 404
+  - url: https://www.myaccesshope.org/api
+    status: 404
+  - url: https://www.myaccesshope.org/openapi.json
+    status: 404
+  - url: https://www.myaccesshope.org/.well-known/agent-card.json
+    status: 404
+  - url: https://app.myaccesshope.org/api/auth/providers
+    status: 200
+  - url: https://app.myaccesshope.org/robots.txt
+    status: 200
+  checked: '2026-08-06'

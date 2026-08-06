@@ -1,0 +1,84 @@
+generated: '2026-08-06'
+method: searched
+source: https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award
+docs: https://www.myaccesshope.org/blog/accesshope-achieves-hitrust-csf-certification
+
+# AccessHope publishes no public API contract, so API-level conformance
+# (OAuth 2.0, OIDC, FHIR, SCIM, OData, RFC 9457, pagination, idempotency)
+# cannot be assessed from any machine-readable artifact. What the company
+# DOES publish on its own site is a named information-security and
+# healthcare-compliance posture, captured below.
+
+certifications:
+- id: hitrust-csf-r2
+  name: HITRUST Risk-based, two-year (r2) Certified
+  status: claimed
+  first_announced: '2022-10-26'
+  reaffirmed: '2024-05-30'
+  evidence: https://www.myaccesshope.org/blog/accesshope-achieves-hitrust-csf-certification
+  note: >-
+    Announced on AccessHope's own blog 2022-10-26 and restated as maintained in the
+    2024-05-30 Fortress Cybersecurity Award press release. AccessHope publishes no
+    trust center or certificate-validity page, so currency was not independently verified.
+- id: soc2-type-1
+  name: SOC 2 Type I
+  status: claimed
+  first_announced: '2024-05-30'
+  evidence: https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award
+- id: soc2-type-2
+  name: SOC 2 Type II
+  status: claimed
+  first_announced: '2024-05-30'
+  evidence: https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award
+
+regulatory:
+- id: hipaa
+  conforms: claimed
+  evidence: >-
+    https://www.myaccesshope.org/employers — "All employee information is transmitted,
+    used and stored securely, according to applicable HIPAA guidelines."
+  note: >-
+    A covered-entity/business-associate posture stated in the employer FAQ. No Notice of
+    Privacy Practices or BAA template is published at a public URL.
+
+awards:
+- id: fortress-cybersecurity-2024
+  name: 2024 Fortress Cybersecurity Award (data protection category)
+  awarded_by: Business Intelligence Group
+  date: '2024-05-30'
+  evidence: https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award
+
+standards:
+- id: oauth2
+  conforms: null
+  evidence: no public API or securityScheme published; not assessable
+- id: oidc
+  conforms: false
+  evidence: >-
+    https://app.myaccesshope.org/api/auth/providers returned 200 with a single
+    NextAuth "credentials" provider — no OIDC/federated identity provider is exposed
+- id: fhir
+  conforms: null
+  evidence: no public healthcare data API published; not assessable
+- id: rfc9457-problem-details
+  conforms: null
+  evidence: no public API contract; not assessable
+
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+  - url: https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award
+    http_status: 200
+  - url: https://www.myaccesshope.org/blog/accesshope-achieves-hitrust-csf-certification
+    http_status: 200
+  - url: https://www.myaccesshope.org/employers
+    http_status: 200
+  - url: https://app.myaccesshope.org/api/auth/providers
+    http_status: 200
+  - url: https://trust.myaccesshope.org/
+    http_status: 200
+    note: Thoropass-hosted trust center; see security/accesshope-trust-center.yml
+  - url: https://www.myaccesshope.org/security
+    http_status: 404
+  - url: https://www.myaccesshope.org/compliance
+    http_status: 404

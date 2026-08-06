@@ -1,0 +1,53 @@
+generated: '2026-08-06'
+method: probed
+probe: true
+url: https://trust.myaccesshope.org/
+platform: Thoropass (formerly Laika) hosted Trust Center
+title: Trust Center
+
+# The trust center is a first-party subdomain of myaccesshope.org that AccessHope
+# operates through Thoropass. The served HTML is an 814-byte SPA shell; the content
+# (frameworks, controls, documents, subprocessors) loads from Thoropass's AppSync
+# GraphQL API, which rejects anonymous callers. Document downloads sit behind an
+# email + NDA access-group gate. So the trust center EXISTS and is first-party, but
+# its contents are not machine-readable to an anonymous client.
+readable_anonymously: false
+gating: email + NDA access group (Thoropass access-group flow) for documents
+
+certifications:
+- HITRUST CSF r2
+- SOC 2 Type I
+- SOC 2 Type II
+certifications_source: >-
+  Named in AccessHope's own press release, not read off the trust center — the trust
+  center payload is auth-gated. See conformance/accesshope-conformance.yml.
+
+evidence:
+- source: https://trust.myaccesshope.org/
+  http_status: 200
+  content_type: text/html; charset=utf-8
+  size: 814
+  server: gunicorn via CloudFront
+  keywords: [trust center]
+  note: >-
+    Distinct DNS record — a control host (zzz-nope-control.myaccesshope.org) does not
+    resolve, so this is not a wildcard soft-200.
+- source: https://laika-app-prod.s3.amazonaws.com/static/trust-center/assets/index.js
+  http_status: 200
+  note: Thoropass trust-center SPA bundle referenced by the page
+- source: https://fhovr7cwmfgebommmcztmsw5ze.appsync-api.us-east-1.amazonaws.com/graphql
+  http_status: 401
+  note: >-
+    Anonymous PublicTrustCenterData query returned UnauthorizedException; trust center
+    contents cannot be harvested without credentials.
+- source: https://security.myaccesshope.org/
+  http_status: 0
+  note: does not resolve
+- source: https://www.myaccesshope.org/compliance
+  http_status: 404
+
+x-evidence:
+  fetched: '2026-08-06'
+  url: https://trust.myaccesshope.org/
+  http_status: 200
+  content_type: text/html; charset=utf-8

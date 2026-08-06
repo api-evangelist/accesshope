@@ -42,5 +42,18 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AccessHope is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+AccessHope is a Los Angeles-area health benefits company, founded in 2019 and wholly owned by City of Hope, that delivers remote cancer expertise as an employer-sponsored benefit. Its subspecialist teams review a member's pathology, imaging, molecular testing and treatment plan against the latest evidence from a coalition of National Cancer Institute-designated Comprehensive Cancer Centers — City of Hope, Dana-Farber Cancer Institute, Emory Winship, Fred Hutch, Johns Hopkins Kimmel, Northwestern Medicine Lurie, and UT Southwestern Simmons — and return guidance to the member's own local oncologist rather than moving the patient. AccessHope reports roughly 9 million covered members across 700+ employer and health-plan clients, including 70+ Fortune 500 companies. Delivery is business-to-business: employers, benefits consultants, health plans and navigation partners onboard through an eligibility file feed and an implementation-managed workflow, while members and clinical staff use credentialed web portals. AccessHope publishes no public developer program, API documentation, or machine-readable API contract.
+
+- [Website](https://www.myaccesshope.org/)
+- [About](https://www.myaccesshope.org/about)
+- [Blog](https://www.myaccesshope.org/blog)
+- [News](https://www.myaccesshope.org/news)
+- [PressReleases](https://www.myaccesshope.org/press-releases)
+- [Careers](https://www.myaccesshope.org/careers)
+- [PrivacyPolicy](https://www.myaccesshope.org/privacy)
+- [TermsOfService](https://www.myaccesshope.org/terms)
+- [Login](https://app.myaccesshope.org/)
+- [LinkedIn](https://www.linkedin.com/company/accesshope)
+- [Twitter](https://twitter.com/myaccesshope)
+- [Compliance](https://www.myaccesshope.org/press-releases/accesshope-wins-2024-fortress-cybersecurity-award)
+- [BlogRSS](https://www.myaccesshope.org/blog/rss.xml)
